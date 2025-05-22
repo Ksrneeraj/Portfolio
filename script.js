@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectsData = {
         healthCareAI: {
             title: "AI-Powered Health Care Assistance",
-            image: "https://placehold.co/800x500/4CAF50/FFFFFF?text=Healthcare+AI",
+            image: "./assets/health thumb.png",
             description: "Developed a full-stack AI-powered healthcare assistance website using the MERN stack, integrating features like appointment booking, prescription analysis, and medicine dosage tracking. Implemented a chatbot-powered workout trainee assistant, enhancing user engagement and providing personalized fitness recommendations. Designed and built a user-friendly dashboard for tracking health metrics, managing prescriptions, and accessing a pill store, improving patient experience and accessibility.",
             tech: ["MERN Stack", "AI", "Chatbot", "API Integration"],
             role: "My Role: Full-stack Developer & AI Integrator",
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         wasteManagement: {
             title: "Waste Management Website",
-            image: "https://placehold.co/800x500/4CAF50/FFFFFF?text=Waste+Management",
+            image: "./assets/wastthumb.png",
             description: "Developed a platform for users to sell their waste, which is resold to industries. Promoted sustainability by developing eco-friendly products such as chairs and stationery from waste materials. Facilitated a marketplace connecting consumers and industries for waste trading and recycling.",
             tech: ["Web Development", "Marketplace", "Sustainability"],
             role: "My Role: Platform Developer",
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         outfitAssistant: {
             title: "Virtual AI Outfit Assistant",
-            image: "https://placehold.co/800x500/4CAF50/FFFFFF?text=Outfit+Assistant",
+            image: "./assets/aioutfitthumb.png",
             description: "Built an AI Outfit Assistant using MERN Stack, integrating Open Weather API for weather-based clothing recommendations. Developed a dynamic UI for personalized outfit suggestions based on real-time weather data. Optimized API integration for seamless weather updates and accurate recommendations.",
             tech: ["MERN Stack", "AI", "Open Weather API", "Dynamic UI"],
             role: "My Role: AI Developer & UI/UX Designer",
