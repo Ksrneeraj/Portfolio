@@ -1,0 +1,753 @@
+/* Base styles for body and scrollbar */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000000; /* Black */
+    color: #FFFFFF; /* White */
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+/* Headings use Montserrat */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Custom scrollbar for aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #1A1A1A; /* Very dark gray */
+}
+::-webkit-scrollbar-thumb {
+    background: #333333; /* Dark gray */
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555555; /* Lighter gray on hover */
+}
+
+/* Accent color definitions */
+.accent-primary-text {
+    color: #4CAF50; /* Green */
+}
+.accent-primary-bg {
+    background-color: #4CAF50; /* Green */
+}
+.accent-primary-border {
+    border-color: #4CAF50; /* Green */
+}
+.accent-secondary-text {
+    color: #FF9800; /* Orange */
+}
+.accent-secondary-bg {
+    background-color: #FF9800; /* Orange */
+}
+.accent-tertiary-text {
+    color: #03A9F4; /* Light Blue */
+}
+
+/* Animation classes for scroll-triggered effects */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+.scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Project card specific hover effects */
+.project-card:hover .project-image {
+    transform: scale(1.05); /* Slightly zoom image on hover */
+    transition: transform 0.3s ease-in-out;
+}
+.project-card:hover .project-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Modal specific styles for project details */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top of everything */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if content overflows */
+    background-color: rgba(0,0,0,0.8); /* Black background with transparency */
+    backdrop-filter: blur(8px); /* Blur background behind modal */
+    -webkit-backdrop-filter: blur(8px); /* Safari support for backdrop-filter */
+    animation: fadeInModal 0.3s ease-out; /* Fade-in animation for the modal itself */
+}
+
+.modal-content {
+    background-color: #1A1A1A; /* Very dark gray background for modal content */
+    margin: 5% auto; /* 5% from the top and horizontally centered */
+    padding: 2.5rem;
+    border-radius: 1rem; /* Rounded corners */
+    width: 90%; /* Responsive width */
+    max-width: 800px; /* Maximum width for larger screens */
+    position: relative;
+    animation: slideInModal 0.4s ease-out; /* Slide-in animation for content */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* Deep shadow */
+    border: 1px solid #333333; /* Subtle border */
+    max-height: 90vh; /* Limit height to 90% of viewport height */
+    overflow-y: auto; /* Enable vertical scrolling for modal content */
+}
+
+.close-button {
+    color: #CCCCCC; /* Light gray color */
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out; /* Smooth color transition on hover */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #4CAF50; /* Green on hover/focus */
+    text-decoration: none;
+}
+
+/* Keyframe animations for modal */
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInModal {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive image styling within modal */
+.modal-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Timeline specific styles - Enhanced and Simplified */
+.journey-container-wrapper {
+    position: relative;
+    padding: 10px 0;
+    max-width: 900px; /* Constrain width for better visual flow */
+    margin: 0 auto; /* Center the timeline */
+}
+
+.journey-container-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 6px;
+    background: linear-gradient(to bottom, #4CAF50, #FF9800); /* Green to Orange gradient */
+    transform: translateX(-50%);
+    border-radius: 3px;
+    z-index: 0;
+}
+
+/* New: Glowing line for journey section */
+.journey-glow-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 6px; /* Same width as the main line */
+    background: linear-gradient(to top, #FF9800, #FFD700); /* Orange to Yellow glow */
+    transform: translateX(-50%);
+    border-radius: 3px;
+    z-index: 1; /* Above the main line but below circles */
+    height: 0; /* Initially hidden */
+    box-shadow: 0 0 15px rgba(255, 152, 0, 0.8), 0 0 25px rgba(255, 215, 0, 0.6); /* Glow effect */
+    transition: height 0.1s ease-out; /* Smooth height transition for glow */
+}
+
+
+.journey-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3rem;
+    opacity: 0; /* Initial state for animation */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.journey-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.journey-item-content {
+    background-color: #1A1A1A; /* Very dark gray */
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+    border: 1px solid #333333; /* Dark gray border */
+    width: calc(50% - 40px); /* Adjusted width */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.journey-item-content:hover {
+    transform: translateY(-5px) scale(1.01); /* Lift and slight scale on hover */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5), 0 0 20px rgba(255, 152, 0, 0.5); /* Subtle orange glow on hover */
+}
+
+.journey-item-content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+/* Right-aligned items */
+.journey-item.right-side {
+    justify-content: flex-end; /* Push content to the right */
+}
+.journey-item.right-side .journey-item-content {
+    margin-left: auto;
+    text-align: left;
+    transform: translateX(50px); /* Initial state for slide-in-right */
+}
+.journey-item.right-side.visible .journey-item-content {
+    transform: translateX(0);
+}
+.journey-item.right-side .journey-item-content::before {
+    left: -15px;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #1A1A1A transparent transparent; /* Match content background */
+}
+
+/* Left-aligned items */
+.journey-item.left-side {
+    justify-content: flex-start; /* Push content to the left */
+}
+.journey-item.left-side .journey-item-content {
+    margin-right: auto;
+    text-align: right;
+    transform: translateX(-50px); /* Initial state for slide-in-left */
+}
+.journey-item.left-side.visible .journey-item-content {
+    transform: translateX(0);
+}
+.journey-item.left-side .journey-item-content::before {
+    right: -15px;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent #1A1A1A; /* Match content background */
+}
+
+.journey-circle {
+    background-color: #4CAF50; /* Green */
+    border: 4px solid #000000; /* Black border */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: 0 0 15px rgba(255, 152, 0, 0.7); /* Orange glow */
+}
+
+/* Responsive adjustments for the journey section */
+@media (max-width: 768px) {
+    .journey-container-wrapper::before {
+        left: 20px;
+        transform: translateX(0);
+    }
+    .journey-glow-line {
+        left: 20px; /* Align glow line on mobile */
+        transform: translateX(-50%);
+    }
+    .journey-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 2rem; /* Reduce margin for mobile */
+    }
+    .journey-item-content {
+        width: calc(100% - 40px);
+        margin-left: 40px; /* Offset for circle */
+        margin-right: 0; /* Reset for mobile */
+        text-align: left;
+        transform: translateX(0) !important; /* Remove initial slide for mobile */
+    }
+    .journey-item-content::before {
+        left: 25px;
+        right: auto;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent #1A1A1A transparent transparent; /* Match content background */
+    }
+    .journey-circle {
+        left: 20px;
+        transform: translateX(-50%);
+        margin-top: 0; /* Reset margin */
+    }
+    /* Ensure all journey items align left on mobile */
+    .journey-item.left-side, .journey-item.right-side {
+        justify-content: flex-start;
+    }
+}
+
+/* Skills Carousel Specific Styles */
+.skills-carousel-container {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden; /* Changed to hidden as buttons are removed */
+    padding: 1rem 0; /* Add some vertical padding for visual comfort */
+    white-space: nowrap; /* Keep items in a single line */
+    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+}
+
+.skills-carousel-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+}
+
+.skills-carousel {
+    display: inline-flex; /* Changed from flex to inline-flex */
+    flex-wrap: nowrap; /* Ensure items stay in a single line */
+}
+
+.skill-item {
+    flex-shrink: 0; /* Prevent items from shrinking */
+    margin-right: 2rem; /* Spacing between items */
+    width: 150px; /* Fixed width for each skill item */
+    text-align: center;
+    background-color: #1A1A1A; /* Very dark gray */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition for hover */
+}
+.skill-item:hover {
+    transform: translateY(-8px) scale(1.05); /* Stronger lift and slight scale */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6); /* More prominent shadow */
+    border-color: #4CAF50; /* Green border on hover */
+}
+
+/* Specific colors for skill icons */
+.icon-dsa { color: #03A9F4; /* Light Blue */ }
+.icon-mern { color: #4CAF50; /* Green */ }
+.icon-dbms { color: #FF9800; /* Orange */ }
+.icon-ml { color: #03A9F4; /* Light Blue */ }
+.icon-powerbi { color: #4CAF50; /* Green */ }
+.icon-genai { color: #FF9800; /* Orange */ }
+.icon-cpp { color: #03A9F4; /* Light Blue */ }
+.icon-python { color: #4CAF50; /* Green */ }
+.icon-js { color: #FF9800; /* Orange */ }
+.icon-html { color: #03A9F4; /* Light Blue */ }
+.icon-css { color: #4CAF50; /* Green */ }
+.icon-mongodb { color: #FF9800; /* Orange */ }
+.icon-sql { color: #03A9F4; /* Light Blue */ }
+
+/* Header hover effect */
+.nav-link-hover:hover {
+    color: #4CAF50; /* Green on hover */
+}
+
+/* New hover effects for achievement and certification cards */
+.achievement-item:hover {
+    transform: translateY(-8px) scale(1.02); /* Lift and slight scale */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6); /* Stronger shadow */
+    border: 1px solid #4CAF50; /* Green border on hover */
+}
+
+/* Social links styles */
+.social-links-container { /* A wrapper for the social links to apply flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Spacing between buttons */
+}
+
+.social-btn {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    font-family: 'Inter', sans-serif; /* Reverted to Inter */
+    color: #FFFFFF; /* White text for dark theme */
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3); /* Adjusted shadow for dark theme */
+    background: #1A1A1A; /* Very dark gray for buttons */
+    margin: 5px; /* Keep margin from snippet */
+    transition: width 0.5s ease, border-radius 0.5s ease, background-color 0.3s ease; /* Smoother transition */
+    display: flex; /* Ensure flex for icon and text */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflowing text initially */
+    white-space: nowrap; /* Prevent text wrap */
+    padding: 0 10px; /* Initial padding */
+}
+
+.social-btn i, .social-btn svg { /* Target Font Awesome icons and SVGs */
+    font-size: 1.5rem; /* Adjust icon size */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    transition: color 0.3s ease; /* Smooth color transition for icon */
+}
+
+.social-btn span {
+    width: 0px; /* Hidden initially */
+    overflow: hidden;
+    transition: width 0.5s ease, padding 0.5s ease;
+    text-align: center;
+    font-weight: 600;
+    padding-left: 0; /* No padding initially */
+}
+
+.social-btn:hover {
+    width: 160px; /* Increased width to accommodate text */
+    border-radius: 5px;
+    background-color: #333333; /* Dark gray on hover */
+}
+
+.social-btn:hover span {
+    width: auto; /* Expand width to show text */
+    padding-left: 10px; /* Add padding when expanded */
+}
+
+/* Initial icon colors */
+#github i, #github svg {
+    color: #FFFFFF; /* White */
+}
+#linkedin i, #linkedin svg {
+    color: #03A9F4; /* Light Blue */
+}
+#email i, #email svg {
+    color: #FF9800; /* Orange */
+}
+
+/* Specific icon colors on hover */
+#github:hover i, #github:hover svg {
+    color: #000000; /* Black text on hover */
+}
+#linkedin:hover i, #linkedin:hover svg {
+    color: #03A9F4; /* Light Blue on hover */
+}
+#email:hover i, #email:hover svg {
+    color: #FF9800; /* Orange on hover */
+}
+
+/* Hover Underline Animation for Navigation Links */
+.hover-underline {
+    position: relative;
+    display: inline-block; /* Essential for positioning pseudo-elements */
+    text-decoration: none; /* Remove default underline */
+}
+
+.hover-underline::after,
+.hover-underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    /* Using existing accent colors for a cohesive design */
+    background: linear-gradient(to right, #4CAF50, #FF9800); /* Green to Orange */
+    bottom: -5px; /* Position below the text */
+    left: 0;
+    transform: scaleX(0); /* Hidden initially */
+    transform-origin: right; /* Animation starts from right */
+    transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+    top: -5px; /* Position above the text */
+    transform-origin: left; /* Animation starts from left */
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+    transform: scaleX(1); /* Reveal on hover */
+}
+
+/* Terminal Text Effect Styles for Header Name */
+.header-terminal-text {
+    font-family: 'Fira Code', monospace; /* Monospace font for terminal feel */
+    color: #4CAF50; /* Green */
+    display: inline-block; /* Allows text to wrap naturally if needed */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflowing text before typing */
+    border-right: 2px solid transparent; /* Initial transparent border for cursor */
+}
+
+.header-terminal-text.typing-cursor::after {
+    content: '|'; /* Blinking cursor */
+    animation: blink-caret 0.75s step-end infinite;
+    margin-left: 0.1rem; /* Small margin for cursor */
+    color: #4CAF50; /* Cursor color matches text */
+}
+
+/* Keyframes for blinking cursor */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #4CAF50; } /* Matches text color */
+}
+
+/* Removed old glow effect from here */
+#hero h1 .accent-primary-text:hover {
+    text-shadow: none; /* Explicitly remove any previous text-shadow */
+}
+
+/* Removed name-animated-text styles */
+
+
+/* Styles for the new About Me section design */
+.about-image-card {
+    background-color: #1A1A1A; /* Very dark gray */
+    border: 4px solid #4CAF50; /* Green border */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    transform: rotate(-3deg); /* Initial slight rotation */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5); /* Stronger shadow */
+    z-index: 20; /* Ensure it's above the text card if overlapping */
+    position: relative; /* For z-index to work */
+}
+
+.about-image-card:hover {
+    transform: rotate(0deg) scale(1.02); /* Straighten and slightly enlarge on hover */
+    box-shadow: 0 25px 40px rgba(0,0,0,0.7); /* Even stronger shadow on hover */
+}
+
+.about-text-card {
+    background-color: #333333; /* Dark gray */
+    border-left: 8px solid #FF9800; /* Orange left border */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    transform: rotate(2deg); /* Initial slight counter-rotation */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5); /* Stronger shadow */
+    z-index: 10; /* Ensure it's below the image card if overlapping */
+    position: relative; /* For z-index to work */
+    margin-left: -3rem; /* Overlap with image card */
+    padding: 2.5rem; /* Ensure ample padding */
+}
+
+.about-text-card:hover {
+    transform: rotate(0deg) scale(1.01); /* Straighten and slightly enlarge on hover */
+    box-shadow: 0 25px 40px rgba(0,0,0,0.7); /* Even stronger shadow on hover */
+}
+
+/* Responsive adjustments for the about section cards */
+@media (max-width: 768px) {
+    .about-image-card, .about-text-card {
+        transform: rotate(0deg) !important; /* Remove rotation on small screens */
+        margin-left: 0 !important; /* Remove overlap margin on small screens */
+        width: 100% !important; /* Full width on small screens */
+    }
+    .about-text-card {
+        margin-top: 2rem; /* Add some space between cards on small screens */
+    }
+}
+
+/* New styles for Certification Section */
+.certifications-container-wrapper {
+    padding: 1rem 0; /* Keep vertical padding */
+}
+
+.certifications-grid {
+    display: grid; /* Changed to grid */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid columns */
+    gap: 1.5rem; /* Spacing between grid items */
+    justify-items: center; /* Center items within their grid cells */
+}
+
+.certification-item {
+    background-color: #1A1A1A; /* Very dark gray */
+    border-radius: 1rem; /* More rounded corners */
+    padding: 2rem;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d; /* Enable 3D transforms for children */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
+    border: 2px solid transparent; /* Initial transparent border */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4); /* Subtle initial shadow */
+    perspective: 1000px; /* For the 3D effect */
+    height: auto; /* Allow height to adjust to content */
+    width: 100%; /* Take full width of grid cell */
+}
+
+.certification-item:hover {
+    transform: translateY(-10px) rotateX(5deg) scale(1.03); /* Lift, slight 3D tilt, and scale up */
+    box-shadow: 0 20px 40px rgba(76, 175, 80, 0.4), 0 0 30px rgba(76, 175, 80, 0.6); /* Green glow effect */
+    border-color: #4CAF50; /* Green border on hover */
+}
+
+.certification-item .flex img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.certification-item:hover .flex img {
+    transform: scale(1.1); /* Slightly enlarge logo on hover */
+}
+
+.certification-item h3 {
+    color: #FFFFFF; /* White text for title */
+}
+
+.certification-item p {
+    color: #CCCCCC; /* Slightly darker text for details */
+}
+
+.certification-item .accent-primary-bg {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.certification-item .accent-primary-bg:hover {
+    background-color: #388E3C; /* Darker green on button hover */
+}
+
+/* Contact Section Specific Styles */
+.contact-form-input {
+    background-color: #000000; /* Black background for inputs */
+    border: 1px solid #333333; /* Dark gray border */
+    color: #FFFFFF; /* White text color */
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem; /* Rounded corners */
+    width: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-form-input:focus {
+    outline: none;
+    border-color: #03A9F4; /* Light Blue focus border */
+    box-shadow: 0 0 0 3px rgba(3, 169, 244, 0.3); /* Soft light blue glow on focus */
+}
+
+/* Enhanced Hover for the entire Contact Form Card */
+#contact-form {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+#contact-form:hover {
+    transform: translateY(-5px); /* Lift slightly */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6), 0 0 20px rgba(76, 175, 80, 0.5); /* More prominent shadow with green glow */
+}
+
+/* Animated Button Styles */
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: #4CAF50; /* Green */
+    box-shadow: 0 0 0 2px #4CAF50; /* Green */
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    /* Added for centering */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: #4CAF50; /* Green */
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+    right: 16px;
+}
+
+.animated-button .arr-2 {
+    left: -25%;
+}
+
+.animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #4CAF50; /* Green */
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #000000; /* Black for text on hover */
+    border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+    right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+    left: 16px;
+}
+
+.animated-button:hover .text {
+    transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+    fill: #000000; /* Black for SVG on hover */
+}
+
+.animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px #4CAF50; /* Green */
+}
+.animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+}

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SREE RAM NEERAJ KUCHIPUDI - AI & ML Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&family=Fira+Code:400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-lg py-4 px-6 md:px-12">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold accent-primary-text hover:text-blue-300 transition duration-300 nav-link-hover hover-underline">
+                <span id="header-name-terminal" class="header-terminal-text"></span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-white hover:text-blue-400 transition duration-300 nav-link-hover hover-underline">About</a>
+                <a href="#skills" class="text-white hover:text-blue-400 transition duration-300 nav-link-hover hover-underline">Skills</a>
+                <a href="#projects" class="text-white hover:text-blue-400 transition duration-300 nav-link-hover hover-underline">Projects</a>
+                <a href="#achievements" class="text-white hover:text-blue-400 transition duration-300 nav-link-hover hover-underline">Achievements</a>
+                <a href="#certifications" class="text-white hover:text-blue-400 transition duration-300 nav-link-hover hover-underline">Certifications</a>
+                <a href="#journey" class="text-white hover:text-blue-400 transition duration-300 nav-link-hover hover-underline">Journey</a>
+                <a href="#contact" class="text-white hover:text-blue-400 transition duration-300 nav-link-hover hover-underline">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white hover:text-blue-400 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 text-center">
+            <a href="#about" class="block text-white hover:text-blue-400 transition duration-300 py-2 nav-link-hover hover-underline">About</a>
+            <a href="#skills" class="block text-white hover:text-blue-400 transition duration-300 py-2 nav-link-hover hover-underline">Skills</a>
+            <a href="#projects" class="block text-white hover:text-blue-400 transition duration-300 py-2 nav-link-hover hover-underline">Projects</a>
+            <a href="#achievements" class="block text-white hover:text-blue-400 transition duration-300 py-2 nav-link-hover hover-underline">Achievements</a>
+            <a href="#certifications" class="block text-white hover:text-blue-400 transition duration-300 py-2 nav-link-hover hover-underline">Certifications</a>
+            <a href="#journey" class="block text-white hover:text-blue-400 transition duration-300 py-2 nav-link-hover hover-underline">Journey</a>
+            <a href="#contact" class="block text-white hover:text-blue-400 transition duration-300 py-2 nav-link-hover hover-underline">Contact</a>
+        </div>
+    </nav>
+
+    <main class="pt-24">
+        <section id="hero" class="min-h-screen flex items-center justify-center text-center px-4 py-16 bg-gradient-to-br from-black to-[#111111]">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-4 fade-in slide-in-left">
+                    Hi, I'm <span class="accent-primary-text">SREE RAM NEERAJ KUCHIPUDI</span>
+                </h1>
+                <p class="text-2xl md:text-3xl font-light mb-8 text-gray-300 fade-in" style="animation-delay: 0.2s;">
+                    A Passionate <span class="font-semibold accent-secondary-text">AI & ML Engineer</span> building innovative solutions.
+                </p>
+                <p class="text-lg md:text-xl mb-12 text-gray-300 fade-in" style="animation-delay: 0.6s;">
+                    Crafting elegant code and bringing ideas to life through robust and scalable applications.
+                </p>
+                <div class="social-links-container flex justify-center space-x-6 mb-12 fade-in" style="animation-delay: 0.8s;">
+                    <a href="https://github.com/yourusername" target="_blank" class="social-btn" id="github" aria-label="GitHub Profile">
+                        <i class="fab fa-github"></i><span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-btn" id="linkedin" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:ksrneeraj652004@gmail.com" class="social-btn" id="email" aria-label="Email Me">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+                        </svg>
+                        <span>Email</span>
+                    </a>
+                </div>
+                <button id="view-my-work-button" class="animated-button fade-in" style="animation-delay: 1s;">
+                    <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                    </svg>
+                    <span class="text">View My Work</span>
+                    <span class="circle"></span>
+                    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 px-4 bg-[#111111]">
+            <div class="container mx-auto max-w-5xl flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3 p-6 rounded-xl shadow-xl about-image-card fade-in slide-in-left">
+                    <img src="https://placehold.co/400x400/1A1A1A/FFFFFF?text=Your+Photo" alt="SREE RAM NEERAJ KUCHIPUDI" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover mx-auto border-4 border-gray-600">
+                </div>
+                <div class="md:w-2/3 rounded-xl shadow-xl about-text-card fade-in slide-in-right">
+                    <h2 class="text-4xl font-bold mb-6 accent-primary-text">About Me</h2>
+                    <p class="text-lg leading-relaxed mb-4 text-gray-300">
+                        I am SREE RAM NEERAJ KUCHIPUDI, a dedicated professional seeking a challenging role where I can continuously learn, grow, and make a meaningful impact. My objective is to leverage my skills to contribute to an organization's success while fostering my professional development.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-300">
+                        During my IBM Skill Build Internship, I gained hands-on experience with generative AI techniques and tools, completing practical projects and tasks. I collaborated on AI-driven models, improving efficiency and accuracy in generative applications, and developed and fine-tuned generative AI models using Langchain and Hugging Face platforms, achieving measurable performance improvements. I thrive in environments where I can innovate and contribute to impactful projects.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 px-4 bg-black overflow-hidden">
+            <div class="container mx-auto max-w-6xl text-center">
+                <h2 class="text-4xl font-bold mb-12 accent-primary-text fade-in">My Skills & Expertise</h2>
+                <div class="skills-carousel-container relative w-full" id="skills-carousel-container">
+                    <div class="skills-carousel" id="skills-carousel">
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fas fa-code text-5xl icon-dsa mb-3"></i>
+                            <p class="text-lg font-semibold text-white">DSA</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fab fa-react text-5xl icon-mern mb-3"></i>
+                            <p class="text-lg font-semibold text-white">MERN Stack</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fas fa-database text-5xl icon-dbms mb-3"></i>
+                            <p class="text-lg font-semibold text-white">DBMS</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fas fa-brain text-5xl icon-ml mb-3"></i>
+                            <p class="text-lg font-semibold text-white">Applied ML</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fas fa-chart-bar text-5xl icon-powerbi mb-3"></i>
+                            <p class="text-lg font-semibold text-white">Power BI</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fas fa-robot text-5xl icon-genai mb-3"></i>
+                            <p class="text-lg font-semibold text-white">Generative AI</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fab fa-cuttlefish text-5xl icon-cpp mb-3"></i>
+                            <p class="text-lg font-semibold text-white">C/C++</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fab fa-python text-5xl icon-python mb-3"></i>
+                            <p class="text-lg font-semibold text-white">Python</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fab fa-js-square text-5xl icon-js mb-3"></i>
+                            <p class="text-lg font-semibold text-white">JavaScript</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fab fa-html5 text-5xl icon-html mb-3"></i>
+                            <p class="text-lg font-semibold text-white">HTML</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fab fa-css3-alt text-5xl icon-css mb-3"></i>
+                            <p class="text-lg font-semibold text-white">CSS</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fas fa-leaf text-5xl icon-mongodb mb-3"></i>
+                            <p class="text-lg font-semibold text-white">MongoDB</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fas fa-database text-5xl icon-sql mb-3"></i>
+                            <p class="text-lg font-semibold text-white">SQL</p>
+                        </div>
+
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fas fa-code text-5xl icon-dsa mb-3"></i>
+                            <p class="text-lg font-semibold text-white">DSA</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fab fa-react text-5xl icon-mern mb-3"></i>
+                            <p class="text-lg font-semibold text-white">MERN Stack</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fas fa-database text-5xl icon-dbms mb-3"></i>
+                            <p class="text-lg font-semibold text-white">DBMS</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fas fa-brain text-5xl icon-ml mb-3"></i>
+                            <p class="text-lg font-semibold text-white">Applied ML</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fas fa-chart-bar text-5xl icon-powerbi mb-3"></i>
+                            <p class="text-lg font-semibold text-white">Power BI</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fas fa-robot text-5xl icon-genai mb-3"></i>
+                            <p class="text-lg font-semibold text-white">Generative AI</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fab fa-cuttlefish text-5xl icon-cpp mb-3"></i>
+                            <p class="text-lg font-semibold text-white">C/C++</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fab fa-python text-5xl icon-python mb-3"></i>
+                            <p class="text-lg font-semibold text-white">Python</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fab fa-js-square text-5xl icon-js mb-3"></i>
+                            <p class="text-lg font-semibold text-white">JavaScript</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fab fa-html5 text-5xl icon-html mb-3"></i>
+                            <p class="text-lg font-semibold text-white">HTML</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fab fa-css3-alt text-5xl icon-css mb-3"></i>
+                            <p class="text-lg font-semibold text-white">CSS</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fas fa-leaf text-5xl icon-mongodb mb-3"></i>
+                            <p class="text-lg font-semibold text-white">MongoDB</p>
+                        </div>
+                        <div class="skill-item p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center justify-center fade-in scale-in">
+                            <i class="fas fa-database text-5xl icon-sql mb-3"></i>
+                            <p class="text-lg font-semibold text-white">SQL</p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 px-4 bg-[#111111]">
+            <div class="container mx-auto max-w-7xl text-center">
+                <h2 class="text-4xl font-bold mb-12 accent-primary-text fade-in">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="project-card bg-black rounded-xl shadow-lg overflow-hidden transform hover:shadow-2xl transition duration-300 fade-in scale-in">
+                        <div class="relative overflow-hidden">
+                            <img src="https://placehold.co/600x400/4CAF50/FFFFFF?text=Healthcare+AI" alt="AI-Powered Health Care Assistance" class="project-image w-full h-56 object-cover transition duration-300">
+                            <div class="project-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                                <button class="view-details-button px-6 py-3 accent-primary-bg text-white font-semibold rounded-full hover:bg-[#388E3C] transition duration-300" data-project="healthCareAI">View Details</button>
+                            </div>
+                        </div>
+                        <div class="p-6 text-left">
+                            <h3 class="text-2xl font-semibold mb-2 text-white">AI-Powered Health Care Assistance</h3>
+                            <p class="text-gray-300 mb-4">A full-stack website integrating appointment booking, prescription analysis, and a chatbot workout trainee.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-[#222222] text-gray-300 text-sm px-3 py-1 rounded-full">MERN Stack</span>
+                                <span class="bg-[#222222] text-gray-300 text-sm px-3 py-1 rounded-full">AI</span>
+                                <span class="bg-[#222222] text-gray-300 text-sm px-3 py-1 rounded-full">Chatbot</span>
+                                <span class="bg-[#222222] text-gray-300 text-sm px-3 py-1 rounded-full">API Integration</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" target="_blank" class="accent-primary-text hover:text-[#388E3C] transition duration-300 text-sm"><i class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
+                                <a href="#" target="_blank" class="accent-primary-text hover:text-[#388E3C] transition duration-300 text-sm"><i class="fab fa-github mr-1"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card bg-black rounded-xl shadow-lg overflow-hidden transform hover:shadow-2xl transition duration-300 fade-in scale-in" style="animation-delay: 0.1s;">
+                        <div class="relative overflow-hidden">
+                            <img src="https://placehold.co/600x400/4CAF50/FFFFFF?text=Waste+Management" alt="Waste Management Website" class="project-image w-full h-56 object-cover transition duration-300">
+                            <div class="project-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                                <button class="view-details-button px-6 py-3 accent-primary-bg text-white font-semibold rounded-full hover:bg-[#388E3C] transition duration-300" data-project="wasteManagement">View Details</button>
+                            </div>
+                        </div>
+                        <div class="p-6 text-left">
+                            <h3 class="text-2xl font-semibold mb-2 text-white">Waste Management Website</h3>
+                            <p class="text-gray-300 mb-4">A platform for waste trading and recycling, promoting sustainability and eco-friendly products.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-[#222222] text-gray-300 text-sm px-3 py-1 rounded-full">Web Development</span>
+                                <span class="bg-[#222222] text-gray-300 text-sm px-3 py-1 rounded-full">Marketplace</span>
+                                <span class="bg-[#222222] text-gray-300 text-sm px-3 py-1 rounded-full">Sustainability</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" target="_blank" class="accent-primary-text hover:text-[#388E3C] transition duration-300 text-sm"><i class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
+                                <a href="#" target="_blank" class="accent-primary-text hover:text-[#388E3C] transition duration-300 text-sm"><i class="fab fa-github mr-1"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card bg-black rounded-xl shadow-lg overflow-hidden transform hover:shadow-2xl transition duration-300 fade-in scale-in" style="animation-delay: 0.2s;">
+                        <div class="relative overflow-hidden">
+                            <img src="https://placehold.co/600x400/4CAF50/FFFFFF?text=Outfit+Assistant" alt="Virtual AI Outfit Assistant" class="project-image w-full h-56 object-cover transition duration-300">
+                            <div class="project-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                                <button class="view-details-button px-6 py-3 accent-primary-bg text-white font-semibold rounded-full hover:bg-[#388E3C] transition duration-300" data-project="outfitAssistant">View Details</button>
+                            </div>
+                        </div>
+                        <div class="p-6 text-left">
+                            <h3 class="text-2xl font-semibold mb-2 text-white">Virtual AI Outfit Assistant</h3>
+                            <p class="text-gray-300 mb-4">An AI-powered assistant providing weather-based clothing recommendations with a dynamic UI.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-[#222222] text-gray-300 text-sm px-3 py-1 rounded-full">MERN Stack</span>
+                                <span class="bg-[#222222] text-gray-300 text-sm px-3 py-1 rounded-full">AI</span>
+                                <span class="bg-[#222222] text-gray-300 text-sm px-3 py-1 rounded-full">Open Weather API</span>
+                                <span class="bg-[#222222] text-gray-300 text-sm px-3 py-1 rounded-full">Dynamic UI</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" target="_blank" class="accent-primary-text hover:text-[#388E3C] transition duration-300 text-sm"><i class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
+                                <a href="#" target="_blank" class="accent-primary-text hover:text-[#388E3C] transition duration-300 text-sm"><i class="fab fa-github mr-1"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" aria-label="Close Modal">&times;</span>
+                <h3 id="modal-project-title" class="text-3xl font-bold mb-4 accent-primary-text"></h3>
+                <img id="modal-project-image" src="" alt="" class="modal-image">
+                <p id="modal-project-description" class="text-gray-300 mb-4 leading-relaxed"></p>
+                <div id="modal-project-tech" class="flex flex-wrap gap-2 mb-4"></div>
+                <p id="modal-project-role" class="text-gray-300 mb-2"></p>
+                <p id="modal-project-contributions" class="text-gray-300 mb-2"></p>
+                <p id="modal-project-challenges" class="text-gray-300 mb-2"></p>
+                <p id="modal-project-outcomes" class="text-gray-300 mb-4"></p>
+                <div class="flex flex-wrap gap-4">
+                    <a id="modal-live-demo" href="#" target="_blank" class="px-5 py-2 accent-primary-bg text-white font-semibold rounded-full hover:bg-[#388E3C] transition duration-300"><i class="fas fa-external-link-alt mr-2"></i> Live Demo</a>
+                    <a id="modal-source-code" href="#" target="_blank" class="px-5 py-2 bg-[#222222] text-white font-semibold rounded-full hover:bg-[#444444] transition duration-300"><i class="fab fa-github mr-2"></i> Source Code</a>
+                </div>
+            </div>
+        </div>
+
+        <section id="achievements" class="py-20 px-4 bg-black">
+            <div class="container mx-auto max-w-6xl text-center">
+                <h2 class="text-4xl font-bold mb-12 accent-primary-text fade-in">Achievements</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="achievement-item bg-[#111111] rounded-lg shadow-lg p-6 text-left transform hover:shadow-xl transition duration-300 fade-in slide-in-left">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-award text-3xl accent-secondary-text mr-4"></i>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Qualified for 2nd round - Smart India Hackathon</h3>
+                                <p class="text-gray-300 text-sm">National Level Competition</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-2">Advanced to the second round of India's largest hackathon, showcasing innovative problem-solving.</p>
+                        <p class="text-gray-400 text-sm">Date: 2024</p>
+                    </div>
+                    <div class="achievement-item bg-[#111111] rounded-lg shadow-lg p-6 text-left transform hover:shadow-xl transition duration-300 fade-in slide-in-left" style="animation-delay: 0.1s;">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-trophy text-3xl accent-secondary-text mr-4"></i>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Finalist - TRI-NIT Hackathon</h3>
+                                <p class="text-gray-300 text-sm">Inter-NIT Competition</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-2">Reached the finals of a competitive hackathon, demonstrating strong technical and teamwork skills.</p>
+                        <p class="text-gray-400 text-sm">Date: 2024</p>
+                    </div>
+                    <div class="achievement-item bg-[#111111] rounded-lg shadow-lg p-6 text-left transform hover:shadow-xl transition duration-300 fade-in slide-in-left" style="animation-delay: 0.2s;">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-users text-3xl accent-secondary-text mr-4"></i>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">General Secretary - Krithomedh</h3>
+                                <p class="text-gray-300 text-sm">Technical Fest Organizing Committee</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-2">Organized technical events, coding contests, and national-level hackathons, serving as Event Management Lead and PR Head.</p>
+                        <p class="text-gray-400 text-sm">Date: (Relevant Period)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="py-20 px-4 bg-[#111111]">
+            <div class="container mx-auto max-w-6xl text-center">
+                <h2 class="text-4xl font-bold mb-12 accent-primary-text fade-in">Certifications</h2>
+                <div class="certifications-container-wrapper relative w-full">
+                    <div class="certifications-grid">
+                        <div class="certification-item fade-in slide-in-right">
+                            <div class="flex items-center mb-3">
+                                <img src="https://placehold.co/60x60/1A1A1A/FFFFFF?text=Udemy" alt="Udemy Logo" class="w-16 h-16 object-contain mr-4 rounded-md">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Certified in Python</h3>
+                                    <p class="text-gray-300 text-sm">Issuing Org: Udemy</p>
+                                </div>
+                            </div>
+                            <p class="mb-2 text-white">Demonstrated proficiency in Python programming language.</p>
+                            <p class="text-gray-400 text-sm mb-4">Issued: (Date)</p>
+                            <a href="#" target="_blank" class="inline-block px-4 py-2 accent-primary-bg text-white text-sm font-semibold rounded-full hover:bg-[#388E3C] transition duration-300">Verify Credential <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                        <div class="certification-item fade-in slide-in-right">
+                            <div class="flex items-center mb-3">
+                                <img src="https://placehold.co/60x60/1A1A1A/FFFFFF?text=Coursera" alt="Coursera Logo" class="w-16 h-16 object-contain mr-4 rounded-md">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Certified in Applied Machine Learning in Python</h3>
+                                    <p class="text-gray-300 text-sm">Issuing Org: Coursera</p>
+                                </div>
+                            </div>
+                            <p class="mb-2 text-white">Gained expertise in applying machine learning concepts using Python.</p>
+                            <p class="text-gray-400 text-sm mb-4">Issued: (Date)</p>
+                            <a href="#" target="_blank" class="inline-block px-4 py-2 accent-primary-bg text-white text-sm font-semibold rounded-full hover:bg-[#388E3C] transition duration-300">Verify Credential <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                        <div class="certification-item fade-in slide-in-right">
+                            <div class="flex items-center mb-3">
+                                <img src="https://placehold.co/60x60/1A1A1A/FFFFFF?text=Oracle" alt="Oracle Logo" class="w-16 h-16 object-contain mr-4 rounded-md">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Certified in SQL</h3>
+                                    <p class="text-gray-300 text-sm">Issuing Org: Oracle DevGym</p>
+                                </div>
+                            </div>
+                            <p class="mb-2 text-white">Proficient in SQL for database management and querying.</p>
+                            <p class="text-gray-400 text-sm mb-4">Issued: (Date)</p>
+                            <a href="#" target="_blank" class="inline-block px-4 py-2 accent-primary-bg text-white text-sm font-semibold rounded-full hover:bg-[#388E3C] transition duration-300">Verify Credential <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                        <div class="certification-item fade-in slide-in-right">
+                            <div class="flex items-center mb-3">
+                                <img src="https://placehold.co/60x60/1A1A1A/FFFFFF?text=Google" alt="Google Logo" class="w-16 h-16 object-contain mr-4 rounded-md">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Google AI Fundamentals</h3>
+                                    <p class="text-gray-300 text-sm">Issuing Org: Google</p>
+                                </div>
+                            </div>
+                            <p class="mb-2 text-white">Completed a foundational course in AI principles and applications.</p>
+                            <p class="text-gray-400 text-sm mb-4">Issued: (Date)</p>
+                            <a href="#" target="_blank" class="inline-block px-4 py-2 accent-primary-bg text-white text-sm font-semibold rounded-full hover:bg-[#388E3C] transition duration-300">Verify Credential <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                        <div class="certification-item fade-in slide-in-right">
+                            <div class="flex items-center mb-3">
+                                <img src="https://placehold.co/60x60/1A1A1A/FFFFFF?text=IBM" alt="IBM Logo" class="w-16 h-16 object-contain mr-4 rounded-md">
+                                <div>
+                                    <h3 class="text-xl font-semibold">IBM Data Science Professional Certificate</h3>
+                                    <p class="text-gray-300 text-sm">Issuing Org: IBM</p>
+                                </div>
+                            </div>
+                            <p class="mb-2 text-white">Comprehensive training in data science methodologies and tools.</p>
+                            <p class="text-gray-400 text-sm mb-4">Issued: (Date)</p>
+                            <a href="#" target="_blank" class="inline-block px-4 py-2 accent-primary-bg text-white text-sm font-semibold rounded-full hover:bg-[#388E3C] transition duration-300">Verify Credential <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                        <div class="certification-item fade-in slide-in-right">
+                            <div class="flex items-center mb-3">
+                                <img src="https://placehold.co/60x60/1A1A1A/FFFFFF?text=AWS" alt="AWS Logo" class="w-16 h-16 object-contain mr-4 rounded-md">
+                                <div>
+                                    <h3 class="text-xl font-semibold">AWS Certified Cloud Practitioner</h3>
+                                    <p class="text-gray-300 text-sm">Issuing Org: Amazon Web Services</p>
+                                </div>
+                            </div>
+                            <p class="mb-2 text-white">Validated foundational knowledge of AWS cloud concepts.</p>
+                            <p class="text-gray-400 text-sm mb-4">Issued: (Date)</p>
+                            <a href="#" target="_blank" class="inline-block px-4 py-2 accent-primary-bg text-white text-sm font-semibold rounded-full hover:bg-[#388E3C] transition duration-300">Verify Credential <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                        <div class="certification-item fade-in slide-in-right">
+                            <div class="flex items-center mb-3">
+                                <img src="https://placehold.co/60x60/1A1A1A/FFFFFF?text=Udemy" alt="Udemy Logo" class="w-16 h-16 object-contain mr-4 rounded-md">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Certified in Python</h3>
+                                    <p class="text-gray-300 text-sm">Issuing Org: Udemy</p>
+                                </div>
+                            </div>
+                            <p class="mb-2 text-white">Demonstrated proficiency in Python programming language.</p>
+                            <p class="text-gray-400 text-sm mb-4">Issued: (Date)</p>
+                            <a href="#" target="_blank" class="inline-block px-4 py-2 accent-primary-bg text-white text-sm font-semibold rounded-full hover:bg-[#388E3C] transition duration-300">Verify Credential <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                        <div class="certification-item fade-in slide-in-right">
+                            <div class="flex items-center mb-3">
+                                <img src="https://placehold.co/60x60/1A1A1A/FFFFFF?text=Coursera" alt="Coursera Logo" class="w-16 h-16 object-contain mr-4 rounded-md">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Certified in Applied Machine Learning in Python</h3>
+                                    <p class="text-gray-300 text-sm">Issuing Org: Coursera</p>
+                                </div>
+                            </div>
+                            <p class="mb-2 text-white">Gained expertise in applying machine learning concepts using Python.</p>
+                            <p class="text-gray-400 text-sm mb-4">Issued: (Date)</p>
+                            <a href="#" target="_blank" class="inline-block px-4 py-2 accent-primary-bg text-white text-sm font-semibold rounded-full hover:bg-[#388E3C] transition duration-300">Verify Credential <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                        <div class="certification-item fade-in slide-in-right">
+                            <div class="flex items-center mb-3">
+                                <img src="https://placehold.co/60x60/1A1A1A/FFFFFF?text=Oracle" alt="Oracle Logo" class="w-16 h-16 object-contain mr-4 rounded-md">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Certified in SQL</h3>
+                                    <p class="text-gray-300 text-sm">Issuing Org: Oracle DevGym</p>
+                                </div>
+                            </div>
+                            <p class="mb-2 text-white">Proficient in SQL for database management and querying.</p>
+                            <p class="text-gray-400 text-sm mb-4">Issued: (Date)</p>
+                            <a href="#" target="_blank" class="inline-block px-4 py-2 accent-primary-bg text-white text-sm font-semibold rounded-full hover:bg-[#388E3C] transition duration-300">Verify Credential <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                        <div class="certification-item fade-in slide-in-right">
+                            <div class="flex items-center mb-3">
+                                <img src="https://placehold.co/60x60/1A1A1A/FFFFFF?text=Google" alt="Google Logo" class="w-16 h-16 object-contain mr-4 rounded-md">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Google AI Fundamentals</h3>
+                                    <p class="text-gray-300 text-sm">Issuing Org: Google</p>
+                                </div>
+                            </div>
+                            <p class="mb-2 text-white">Completed a foundational course in AI principles and applications.</p>
+                            <p class="text-gray-400 text-sm mb-4">Issued: (Date)</p>
+                            <a href="#" target="_blank" class="inline-block px-4 py-2 accent-primary-bg text-white text-sm font-semibold rounded-full hover:bg-[#388E3C] transition duration-300">Verify Credential <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                        <div class="certification-item fade-in slide-in-right">
+                            <div class="flex items-center mb-3">
+                                <img src="https://placehold.co/60x60/1A1A1A/FFFFFF?text=IBM" alt="IBM Logo" class="w-16 h-16 object-contain mr-4 rounded-md">
+                                <div>
+                                    <h3 class="text-xl font-semibold">IBM Data Science Professional Certificate</h3>
+                                    <p class="text-gray-300 text-sm">Issuing Org: IBM</p>
+                                </div>
+                            </div>
+                            <p class="mb-2 text-white">Comprehensive training in data science methodologies and tools.</p>
+                            <p class="text-gray-400 text-sm mb-4">Issued: (Date)</p>
+                            <a href="#" target="_blank" class="inline-block px-4 py-2 accent-primary-bg text-white text-sm font-semibold rounded-full hover:bg-[#388E3C] transition duration-300">Verify Credential <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                        <div class="certification-item fade-in slide-in-right">
+                            <div class="flex items-center mb-3">
+                                <img src="https://placehold.co/60x60/1A1A1A/FFFFFF?text=AWS" alt="AWS Logo" class="w-16 h-16 object-contain mr-4 rounded-md">
+                                <div>
+                                    <h3 class="text-xl font-semibold">AWS Certified Cloud Practitioner</h3>
+                                    <p class="text-gray-300 text-sm">Issuing Org: Amazon Web Services</p>
+                                </div>
+                            </div>
+                            <p class="mb-2 text-white">Validated foundational knowledge of AWS cloud concepts.</p>
+                            <p class="text-gray-400 text-sm mb-4">Issued: (Date)</p>
+                            <a href="#" target="_blank" class="inline-block px-4 py-2 accent-primary-bg text-white text-sm font-semibold rounded-full hover:bg-[#388E3C] transition duration-300">Verify Credential <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="journey" class="py-20 px-4 bg-black">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-12 accent-primary-text fade-in">My Journey</h2>
+                <div class="journey-container-wrapper" id="journey-container-wrapper">
+                    <div class="journey-glow-line" id="journey-glow-line"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 px-4 bg-black">
+            <div class="container mx-auto max-w-6xl text-center">
+                <h2 class="text-4xl font-bold mb-12 accent-primary-text fade-in">Let's Connect</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    <div class="text-left fade-in slide-in-left">
+                        <p class="text-lg text-gray-300 mb-6">
+                            Have a project in mind or just want to chat? Feel free to reach out!
+                        </p>
+                        <div class="social-links-container flex flex-row items-center space-x-3">
+                            <a href="mailto:ksrneeraj652004@gmail.com" class="social-btn" id="email" aria-label="Email Me">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+                                </svg>
+                                <span>Email</span>
+                            </a>
+                            <a href="https://github.com/yourusername" target="_blank" class="social-btn" id="github" aria-label="GitHub Profile">
+                                <i class="fab fa-github"></i><span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-btn" id="linkedin" aria-label="LinkedIn Profile">
+                                <i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="fade-in slide-in-right">
+                        <form id="contact-form" class="bg-[#111111] p-7 rounded-lg shadow-xl">
+                            <div class="mb-5 text-left">
+                                <label for="name" class="block text-gray-300 text-sm font-semibold mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" class="contact-form-input" placeholder="Robert" required>
+                            </div>
+                            <div class="mb-5 text-left">
+                                <label for="email" class="block text-gray-300 text-sm font-semibold mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="contact-form-input" placeholder="robert@example.com" required>
+                            </div>
+                            <div class="mb-5 text-left">
+                                <label for="message" class="block text-gray-300 text-sm font-semibold mb-2">Your Message</label>
+                                <textarea id="message" name="message" rows="6" class="contact-form-input" placeholder="Enter your message..." required></textarea>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                <button type="submit" class="animated-button">
+                                    <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                                    </svg>
+                                    <span class="text">Send Message</span>
+                                    <span class="circle"></span>
+                                    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                                    </svg>
+                                </button>
+                                <a href="Resume_SEP_SREERAMNEERAJ (1).pdf" target="_blank" class="animated-button">
+                                    <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                                    </svg>
+                                    <span class="text">View Resume</span>
+                                    <span class="circle"></span>
+                                    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div id="form-message" class="mt-4 text-center text-green-400 hidden"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black py-10 px-4 text-center text-gray-300">
+        <div class="container mx-auto">
+            <p>&copy; 2025 SREE RAM NEERAJ KUCHIPUDI. All rights reserved.</p>
+            <p class="mt-4 text-sm">Designed with <i class="fas fa-heart accent-tertiary-text mx-1"></i> by SREE RAM NEERAJ KUCHIPUDI</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
