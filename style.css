@@ -363,9 +363,13 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition for hover */
 }
 .skill-item:hover {
-    transform: translateY(-8px) scale(1.05); /* Stronger lift and slight scale */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.6); /* More prominent shadow */
-    border-color: #4CAF50; /* Green border on hover */
+    transform: translateY(-8px) scale(1.05);
+    box-shadow:
+      0 0 12px #c49924,
+      0 0 20px #c49924,
+      0 0 30px #c49924,
+      0 0 40px #c49924;
+    border-color: #c49924;
 }
 
 /* Specific colors for skill icons */
