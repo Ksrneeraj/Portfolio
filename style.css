@@ -364,13 +364,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 .skill-item:hover {
     transform: translateY(-8px) scale(1.05);
+    border: 2px solid #4CAF50; /* Orange border */
     box-shadow:
-      0 0 12px #c49924,
-      0 0 20px #c49924,
-      0 0 30px #e0a70b,
-      0 0 40px #c49924;
-    border-color: #c49924;
+        0 0 10px #4CAF50,
+        0 0 0px #4CAF50,
+        0 0 10px #4CAF50;
+    cursor: pointer; /* Show pointer cursor */
+    transition: all 0.3s ease-in-out;
 }
+
 
 /* Specific colors for skill icons */
 .icon-dsa { color: #03A9F4; /* Light Blue */ }
